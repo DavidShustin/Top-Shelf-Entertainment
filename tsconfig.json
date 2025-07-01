@@ -1,19 +1,20 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true,                  // ← allow `import React from 'react'`
+    "allowSyntheticDefaultImports": true,     // ← same, for non-ESM packages
+    "moduleResolution": "node",               // ← resolve node_modules imports
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "noImplicitAny": false,
-    "noUnusedParameters": false,
-    "skipLibCheck": true,
+    "paths": { "@/*": ["src/*"] },
     "allowJs": true,
-    "noUnusedLocals": false,
-    "strictNullChecks": false
-  }
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "types": ["vite/client", "react", "react-dom"]
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "exclude": ["node_modules", "src/front/js"]
 }

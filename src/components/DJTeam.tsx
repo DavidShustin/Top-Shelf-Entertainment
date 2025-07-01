@@ -5,7 +5,7 @@ import { Star, Music2, Headphones } from "lucide-react";
 const DJTeam = () => {
   const djs = [
     {
-      name: "DJ Mike",
+      name: "DJ Gibbz",
       specialty: "Wedding Specialist",
       experience: "10+ Years",
       description: "Expert in creating romantic atmospheres and seamless transitions for your special day",
